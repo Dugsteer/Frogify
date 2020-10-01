@@ -1,0 +1,78 @@
+.wrapper {
+ 
+    width: 1200px;
+    border: .5px solid $color-halloween;
+    box-shadow: $box-shadow-large;
+    display: grid;
+    align-items: center;
+display: grid;
+    background-color: $color-halloween-background;
+    margin: 0 auto;
+    grid-template-rows:auto auto auto;
+    grid-template-columns: 23rem 1fr;
+    position: relative;
+  
+    @media only screen and (max-width:$bp-largest){
+      width: 100vw;
+    }
+
+
+    @media only screen and (max-width:$bp-large){
+      grid-template-columns: 28rem 1fr;
+    }
+
+    @media only screen and (max-width:$bp-medium){
+      grid-template-columns: 0 1fr;
+    }
+  }
+
+  .balloon{
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    top: 40%;
+    left: 20%;
+    opacity: 0;
+    z-index: 20;
+
+  
+    @media only screen and (max-width:$bp-medium){
+      top: 60%;
+      left: 60%;
+    }
+    
+  }
+
+  .floatMe {
+    opacity: 1;
+    animation: floating 4s infinite;
+  }
+  
+  
+  
+  @keyframes floating{
+    0% {
+      opacity: 0.5;
+      transform: translateY(5px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(6px);
+
+    }
+
+    50%{
+      opacity: 0.4;
+      transform: translateY(1px);
+    }
+
+    70% {
+      opacity: 0.8;
+      transform: translateY(-4px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(1px);
+    }
+  }

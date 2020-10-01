@@ -1,0 +1,112 @@
+.links {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    width: 700px;
+    height: 480px;
+    display: flex;
+    flex-direction:column;
+    align-items: space-between;
+    justify-self: center;
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem 0rem;
+    background-color: $color-halloween-white;
+    justify-content: flex-start;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-width:$bp-large){
+        width: 700px;
+        height: 400px;
+        
+       }
+    @media only screen and (max-width:$bp-small){
+        justify-content: center;
+        width: 400px;
+        height: 700px;
+        
+       }
+    @media only screen and (max-width:$bp-smallest){
+        justify-content: center;
+        width: 350px;
+        height: 670px;
+        
+       }
+    @media only screen and (max-width:$bp-teeny){
+        justify-content: center;
+        width: 330px;
+        height: 670px;
+        
+       }
+
+&__text {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    color: $color-blue;
+    font-size: 2rem;
+     
+ }
+
+&__images {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width:$bp-small){
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+
+    
+    }
+
+    &-1{
+        width: 40%;
+
+        & img {
+            width: 90%;
+            box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+
+            &:hover {
+                transform: scale(1.02) translateY(2px);
+              box-shadow:2px 2px 5px 4px rgba(0,0,0,0.4);
+            }
+        
+            
+        }
+
+        & figcaption {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+            color: $color-blue;
+
+            @media only screen and (max-width:$bp-small){
+                width: 250px;
+                margin-left: -45px;
+            }
+            @media only screen and (max-width:$bp-smallest){
+                width: 250px;
+                margin-left: -55px;
+            }
+
+            & a{
+                text-decoration: none;
+                color:$color-blue;
+                font-weight: bolder;
+            }
+        }
+
+       
+
+    }
+
+}
+}
+
+
+@media only screen and (max-width: $bp-small){
+    .iclass {
+       margin-inline-start: -80px;
+    }
+}
