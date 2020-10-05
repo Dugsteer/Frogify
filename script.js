@@ -4,6 +4,18 @@ const globo = document.getElementById('balloon');
 const easterEgg = new Audio('../sounds/no2.wav');
 
 
+//Show ABOUT info
+const extra = document.getElementById('info');
+
+function show(){
+    info.classList.toggle('xxc');
+};
+
+function unshow(){
+    info.classList.remove('xxc');
+};
+
+
 function removeBalloon(){
   globo.classList.remove('floatMe');
   easterEgg.pause();
