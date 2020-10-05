@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A fun, free  online Halloween hangman game for learning English. Input your own words, or choose one at random."
+      content="A fun, free  online Halloween observation quiz for learning English. As the creatures turn into frogs, can you remember who was there before?"
     />
-    <meta name="keywords" content="Halloween online flashcards" />
-    <title>Halloween Hangman — the classic word game</title>
+    <meta name="keywords" content="Halloween online game observation vanishing" />
+    <title>Frogification - a Halloween Observation Quiz</title>
     <link rel="icon" type="image/png" href="favicon.png" ; />
+    <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="csi.min.js"></script>
   </head>
@@ -17,7 +18,7 @@
   <body>
     <div class="loader-div" id="loaderDiv" onload = "checkForTop();">
       <div class="loader-container">
-        <img class="ghost" src="img/loader-ghost.svg" alt="" />
+        <img class="ghost" src="img/wizard.png" alt="" />
 
         <p class="shadowFrame">
           <svg
@@ -55,7 +56,7 @@
       <h3 class="nav-bar__title">Esl-Ology.Com</h3>
       <div class="nav-bar__title-page">
         <span class="nav-bar__title-page-main" id="pageTitle"
-          >HALLOWEEN HANGMAN</span
+          >FROGIFICATION</span
         >
       </div>
       <div class="nav-bar__links">
@@ -89,86 +90,29 @@
 
       <div class="introduction">
         <div class="introduction__img" class="imagediv" id="imageCard">
-          <img src="img/halloween-castle.png"  alt="decorative"/>
+          <img src="./img/Spellinda.png" onmouseover="balloonMe();" alt="decorative"/>
         </div>
         <div class="introduction__text">
-          <h1>Can You Guess the Word?</h1>
+          <h1>At the Halloween Ball</h1>
           <p>
-            Choose from a set of Halloween words or secretly enter your own word
-            in this seasonally scary game that helps to practise spelling and
-            the pronunciation of letters of the alphabet. Enter the letters one
-            by one onto the big tombstone, but if you get a letter wrong, one of
-            the little tombstones turns into a ghost and flies away. When there
-            are none left — you lose!
+            SPELLINDA the witch has come to the Halloween party to test her new Frogification spell. Split the class into two teams and press 'FROGIFY!' to see it in action. Who did she change? Find out by clicking 'WHAT?' and give points to the team who guessed right. It starts hard but gets easier. At the end click 'DEFROGIFY!' to let good old Merlin sort out the mess.
           </p>
         </div>
       </div>
 
-      <div class="main" id="gameboard">
-        <div class="ghostdiv" id="ghostdiv">
-          <img class="ghost" id="spirit1" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit2" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit3" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit4" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit5" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit6" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit7" src="img/little-ghost.png" alt="" />
-          <img class="ghost" id="spirit8" src="img/little-ghost.png" alt="" />
+      <div class="game-container">
+      <div class="container" id="container">
+        <div class="content" id="content">
         </div>
-        <div class="tombdiv" id="tombdiv">
-          <input type="text" class="letter" id="letter" placeholder="?" /> -->
-          <button
-            type="submit"
-            onclick="addLetter();isGood();"
-            class="letter-input"
-            id="letterInput"
-          >
-            ENTER</button
-          >-
-          <img class="tomb" id="tomb1" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb2" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb3" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb4" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb5" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb6" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb7" src="img/tombstone1.png" alt="" />
-          <img class="tomb" id="tomb8" src="img/tombstone1.png" alt="" />
-        </div>
-
-        <h1 id="title" class="title">HALLOWEEN HANGMAN</h1>
-
-        <div class="playing" id="playing">
-          <p id="underScore" class="underscore">_ _ _ _</p>
-          <div class="wrongLetters" id="alpha"></div>
-        </div>
-
-        <div class="input-panel" id="input-panel">
-          <input type="text" id="word" value="" id="word" />
-          <div class="buttons">
-            <button
-              type="submit"
-              class="btn"
-              onclick="submit();"
-              id="wordInput"
-              placeholder="submit"
-            >
-              SUBMIT SECRET WORD
-            </button>
-            <button
-              type="submit"
-              class="btn"
-              onclick="chooseWord();"
-              id="wordInput1"
-              placeholder="submit"
-            >
-              TAKE YOUR CHANCES
-            </button>
-          </div>
-        </div>
-
-        <img src="../img/balloon1.png" class="balloon" id="balloon" alt="" />
-        -->
       </div>
+    <div class="answer-me">
+    <button onclick="flashMe();">Frogify</button>
+    <button onclick="showMe();">What?</button>
+    <button onclick="defrogify();">Defrogify</button>
+    <h3 id="answer">What changed?</h3>
+    </div>
+  </div>
+
 
       <div class="links">
         <h2 class="links__text">
@@ -178,7 +122,7 @@
         
           <div class="links__images-1 figure">
             <a href="bingo-halloween.html">
-            <img src="img/HalloweenMatching.jpg"onmouseover="balloonMe();" alt=""></a>
+            <img src="img/HalloweenMatching.jpg" alt=""></a>
               <figcaption><a href="bingo-halloween.html">Halloween Bingo</a> with Printable Cards</figcaption>
           </div>
           <div class="links__images-1 figure">
@@ -189,7 +133,7 @@
       </div>
      
       </div>
-
+</div>
     <footer class="footer">
       <div class="footer__copyright" id="footer">
         <p>© 2020 Copyright Esl-ology.com & copyright owners.</p>
@@ -221,22 +165,32 @@
         }
         preload(
           "img/balloon1.png",
-          "img/halloween-bg2.jpg",
-          "img/halloween-castle.png",
-          "img/halloween-end.jpg",
-          "img/HalloweenBingoCard.jpg",
-          "img/HalloweenMatching.jpg",
-          "img/little-ghost.png",
-          "img/loader-ghost.svg",
-          "img/scroll.png",
-          "img/tombstone1.png",
-          "img/yt_logo_rgb_light.png"
+          "img/bat.svg",
+  "img/bone.svg",
+  "img/broomstick.svg",
+  "img/candy.svg",
+  "img/cat.svg",
+  "img/clown.svg",
+  "img/frankenstein.svg",
+  "img/ghost.svg",
+  "img/monster.svg",
+  "img/mummy.svg",
+  "img/pumpkin.svg",
+  "img/skeleton.svg",
+  "img/spider.svg",
+  "img/vampire.svg",
+  "img/witch.svg",
+  "img/zombie.svg",
+  "img/Spellinda.png",
+  "img/wizard.png",
+  "img/wall.jpg",
+  "img/frog.png"
 
         );
         //--><!]]>
       </script>
     </div>
-
+    <script src="sidebar.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

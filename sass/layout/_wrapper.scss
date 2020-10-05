@@ -1,11 +1,9 @@
 .wrapper {
- 
+
     width: 1200px;
     border: .5px solid $color-halloween;
     box-shadow: $box-shadow-large;
     display: grid;
-    align-items: center;
-display: grid;
     background-color: $color-halloween-background;
     margin: 0 auto;
     grid-template-rows:auto auto auto;
@@ -28,13 +26,17 @@ display: grid;
 
   .balloon{
     position: absolute;
-    width: 150px;
+    width: 300px;
     height: 300px;
-    top: 40%;
-    left: 20%;
+    top: 15%;
+    left: 80%;
     opacity: 0;
     z-index: 20;
 
+    & img {
+      width: 50%;
+      height: 200%;
+    }
   
     @media only screen and (max-width:$bp-medium){
       top: 60%;

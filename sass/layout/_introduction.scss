@@ -1,5 +1,5 @@
 .introduction {
-  grid-row: 2/3;
+  grid-row: 1/2;
   grid-column: 2/3;
   width: 700px;
   height: 400px;
@@ -13,8 +13,13 @@
   justify-content: space-between;
   box-shadow: $box-shadow-small;
 
+  
   @media only screen and (max-width: $bp-large) {
-    width: 700px;
+    width: 600px;
+    height: 400px;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    width: 500px;
     height: 400px;
   }
   @media only screen and (max-width: $bp-small) {
@@ -24,7 +29,7 @@
   }
   @media only screen and (max-width: $bp-smallest) {
     justify-content: center;
-    width: 350px;
+    width: 310px;
     height: 270px;
   }
 
@@ -33,7 +38,7 @@
     width: 200px;
     // height: 17vw;
     height: 150px;
-    background-color: $color-halloween-orange;
+   background-color: $color-halloween-orange;
     padding: 20px;
     align-self: center;
     justify-self: flex-end;

@@ -26,20 +26,15 @@
         
        }
     @media only screen and (max-width:$bp-smallest){
-        justify-content: center;
-        width: 350px;
-        height: 670px;
-        
-       }
-    @media only screen and (max-width:$bp-teeny){
-        justify-content: center;
-        width: 330px;
-        height: 670px;
+        justify-content: flext-start;
+        width: 310px;
+        height: 700px;
         
        }
 
+
 &__text {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     margin-top: 2rem;
     color: $color-blue;
     font-size: 2rem;
@@ -52,15 +47,18 @@
 
     @media only screen and (max-width:$bp-small){
         flex-direction: column;
-        justify-content: flex-start;
+        height: 400px;
+        justify-content:center;
         align-items: center;
         text-align: center;
+       margin-top: 6rem;
 
     
     }
 
     &-1{
         width: 40%;
+        margin-bottom: 2rem;
 
         & img {
             width: 90%;

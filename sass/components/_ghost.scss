@@ -38,8 +38,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -64.5px;
-  margin-top: -85.5px;
+  transform: translate(-50%, -50%);
+  margin-left: 30px;
+
 }
 .ghost {
   animation: float 3s ease-out infinite;
@@ -51,7 +52,12 @@
 }
 .shadowFrame {
   width: 130px;
-  margin-top: 15px;
+  margin-top: 170px;
+  margin-left: -20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .shadow {
   animation: shrink 3s ease-out infinite;
